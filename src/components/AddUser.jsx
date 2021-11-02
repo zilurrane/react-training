@@ -14,6 +14,7 @@ class AddUser extends Component {
             event.preventDefault();
             console.log(this.state)
             const createUserResponse = await createUser(this.state);
+            this.props.onUserAddition();
             this.setState({ name: '' });
             console.log(createUserResponse);
         } catch (error) {
